@@ -66,10 +66,10 @@ export default function Contact() {
 
     emailjs
       .send(
-        "service_8i1p3ks",
-        "template_ddqknrm", 
-        templateParams,
-        "spy_VAjpBIawoCAx9"
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_8i1p3ks",
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_ddqknrm", 
+      templateParams,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "spy_VAjpBIawoCAx9"
       )
       .then(
         (response) => {
